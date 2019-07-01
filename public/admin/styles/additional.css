@@ -1,0 +1,539 @@
+.dropdown-arrow{
+  position: absolute;right: 12px;margin-top: 1px;
+}
+.dropdown-tab{
+  display: none;
+}
+.datepicker--day-name {
+    color: #e85876 !important;
+}
+.btn-file{
+  padding: 0;
+  background-color: transparent;
+}
+.btn-file span{
+  border-bottom: 1px dotted;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 13px;
+}
+.btn-file:hover:span{
+  border-color: transparent !important;
+}
+.timeline {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.li {
+  transition: all 200ms ease-in;
+}
+
+.timestamp {
+  margin-bottom: 20px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100;
+}
+
+.status {
+  padding: 0px 1rem;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #007bff;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+.status p {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #007bff;
+  font-size: 14px;
+}
+.status:before {
+  content: "";
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1px;
+   width: 30px;
+   height: 30px;
+   background-color: white;
+   border-radius: 30px;
+   border: 2px solid #007bff;
+   color: #007bff;
+   position: absolute;
+   top: -17px;
+   left: 35%;
+   transition: all 200ms ease-in;
+}
+#status1:before{
+	content: "1";
+}
+#status2:before{
+	content: "2";
+}
+#status3:before{
+	content: "3";
+}
+#status4:before{
+	content: "4";
+}
+#status5:before{
+	content: "5";
+}
+#status6:before{
+	content: "6";
+}
+#status7:before{
+	content: "7";
+}
+#status8:before{
+	content: "8";
+}
+#status9:before{
+	content: "9";
+}
+
+.li.complete .status:before {
+  background-color: #fff;
+  color: #66DC71;
+  border-color: #66DC71;
+  transition: all 200ms ease-in;
+}
+.li.complete .status p{
+	color: #66DC71;
+}
+.li.current .status p {
+  color: #fff;
+}
+.li.current .status:before {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  transition: all 200ms ease-in;
+}
+.li.current .status p {
+  color: #007bff;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+  .timeline {
+    list-style-type: none;
+    display: block;
+  }
+
+  .li {
+    transition: all 200ms ease-in;
+    display: flex;
+    width: inherit;
+  }
+
+  .timestamp {
+    width: 100px;
+  }
+
+  .status:before {
+    left: -8%;
+    top: 30%;
+    transition: all 200ms ease-in;
+  }
+}
+.span-clickable{
+  color: #007bff;
+  border-bottom: 1px dotted #007bff;
+  cursor: pointer;
+}
+.deal-card-wrapper{
+	width: 100%;
+	overflow-x: scroll;
+}
+.deal-card-single-wrapper{
+	min-width: 27%;
+	width: 27%;
+	padding: 15px 10px;
+}
+.deal-card-single{
+  overflow: hidden;
+}
+.deal-card-single.current{
+  border: 2px solid #007bff;
+  transform: scale(1.01);
+}
+.deal-status{
+  cursor: pointer;
+}
+.tasks-card-single-wrapper{
+  min-width: 25%;
+  width: 25%;
+  padding: 15px 10px;
+}
+
+/* width */
+.deal-card-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+.deal-card-wrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.1);
+}
+ 
+/* Handle */
+.deal-card-wrapper::-webkit-scrollbar-thumb {
+  background: #007bff; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.deal-card-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #0061c9; 
+}
+.deal-card-single .card-header, .tasks-card-single .card-header{
+	padding-bottom: 0;
+}
+.deal-card-single .card-header span, .tasks-card-single .card-header span{
+	font-size: 11px;
+	color: rgba(104, 104, 104, 0.6);
+}
+.deal-card-single .card-header p, .tasks-card-single .card-header p{
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1.25;
+	margin-bottom: 0;
+}
+.deal-card-single .card-header p{
+  display: inline;
+  float: right;
+  padding-top: 4px;
+}
+.deal-card-single  .form-group, .tasks-card-single  .form-group{
+	margin-bottom: .7rem
+}
+.deal-card-single .form-group span, .tasks-card-single .form-group span{
+	font-size: 12px;
+	float: right;
+	cursor: pointer;
+	text-decoration: underline;
+	color: #007bff; 
+	margin-bottom: .5rem;
+}
+.deal-card-single label, .tasks-card-single label, #deal-tasks-form label{
+	font-size: 13px;
+}
+#deal-card-3-filebox-description{
+	font-size: 11px;
+	line-height: 1rem;
+}
+#deal-card-3-filebox-description strong{
+	font-weight: 900;
+}
+.deal-card-3-filebox img{
+	max-width: 100%;
+}
+#deal-card-3-form-date{
+	cursor: initial;
+	text-decoration: none;
+	color: unset; 
+	margin-bottom: .5rem;
+}
+#deal-card-3-form .custom-toggle .custom-control-input:checked~.custom-control-label::before, #deal-card-4-form .custom-toggle .custom-control-input:checked~.custom-control-label::before{
+	background: #007bff;
+    border-color: #007bff;
+}
+.deal-card-5-bill-name{
+	font-size: 12px;
+	font-weight: bold;
+	color: #007bff;
+	margin: 2px 0;
+}
+.deal-card-5-bill-description{
+	font-size: 10px;
+	font-weight: bold;
+	margin: 2px 0;
+}
+.deal-card-5-bill-date{
+	font-size: 10px;
+	margin: 2px 0;
+}
+.deal-card-6-line-name{
+	font-weight: 500;
+	margin: 8px 0 2px;
+	font-size: .8125rem;
+}
+.deal-card-6-line-value{
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	padding: 5px 0;
+	font-size: .8125rem;
+	margin: 0px;
+	font-weight: 300;
+}
+.custom-file-label::after {
+	content: '📎 Загрузить';
+    padding: .35rem;
+    height: calc(calc(2.0625rem + 2px) - 1px * 2);
+    line-height: 1.5;
+    font-weight: 500;
+    color: #007bff;
+    border-left: 1px solid #e1e5eb;
+    background-color: #e9ecef;
+    border-radius: 0 .25rem .25rem 0;
+}
+.custom-file-input:lang(ru)~.custom-file-label::after{
+	content: '📎 Загрузить';
+}
+.custom-file-label{
+	padding: .35rem;
+}
+.deal-history-block{
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.task-small-card-block{
+  max-height: 440px;
+  overflow-y: scroll;
+}
+.task-small-card span{
+	font-size: 12px;
+	font-weight: 400;
+}
+.task-small-card p{
+	font-size: 14px;
+	font-weight: 600;
+}
+.task-small-card a{
+	text-decoration: underline;
+}
+/* width */
+.task-small-card-block::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.task-small-card-block::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.1);
+}
+ 
+/* Handle */
+.task-small-card-block::-webkit-scrollbar-thumb {
+  background: #007bff; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.task-small-card-block::-webkit-scrollbar-thumb:hover {
+  background: #0061c9; 
+}
+/* width */
+.deal-history-block::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.deal-history-block::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.1);
+}
+ 
+/* Handle */
+.deal-history-block::-webkit-scrollbar-thumb {
+  background: #007bff; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.deal-history-block::-webkit-scrollbar-thumb:hover {
+  background: #0061c9; 
+}
+.user-activity__item p{
+	font-size: 14px;
+    line-height: 1rem;
+    margin-bottom: 0;
+}
+.user-activity__item span{
+	font-size: 12px;
+}
+.user-activity__item__icon{
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.fileuploader {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border: 1px dashed #007bff;
+    background: #f6f6f6;
+}
+.fileuploader #upload-label{
+  background: rgba(231, 97, 92, 0);
+  color: #fff;
+  position: absolute;
+  height: 115px;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 20%;
+  text-align: center;
+  cursor: pointer;
+}
+.fileuploader.active{
+  background: #fff;
+}
+.fileuploader.active #upload-label{
+  background: #fff;
+  color: #e7615c;
+}
+
+.fileuploader #upload-label span.title{
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+}
+
+span.tittle {
+    position: relative;
+    top: 50px;
+    color: #007bff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.fileuploader #upload-label i{
+  text-align: center;
+  display: block;
+  color: #007bff;;
+  font-size: 36px;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+/** Preview of collections of uploaded documents **/
+.preview-container{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  margin: auto;
+  top: 25px;
+  visibility: hidden;
+}
+.preview-container #previews{
+  max-height: 400px;
+  overflow: auto; 
+}
+.preview-container #previews .zdrop-info{
+  width: 88%;
+  margin-right: 2%;
+}
+.preview-container #previews.collection{
+  margin: 0;
+  box-shadow: none;
+}
+
+.preview-container #previews.collection .collection-item {
+    background-color: #e0e0e0;
+}
+
+.preview-container #previews.collection .actions a{
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1;
+}
+.preview-container #previews.collection .actions a i{
+  font-size: 1em;
+  line-height: 1.6;
+}
+.preview-container #previews.collection .dz-error-message{
+  font-size: 0.8em;
+  margin-top: -12px;
+  color: #F44336;
+}
+
+
+
+/*media queries*/
+
+@media only screen and (max-width: 601px){
+  .fileuploader {
+    width: 100%;
+  }
+
+ .preview-container {
+    width: 100%;
+  }
+}
+
+#modal-shadow{
+	display: none;
+	position: fixed;
+	z-index: 1100;
+	background-color: rgba(0,0,0,0.3);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.modal-window-clients{
+	display: none;
+	position: absolute;
+	z-index: 1101;
+	background-color: white;
+	top: 75px;
+	left: 5%;
+	width: 90%;
+	height: auto;
+}
+.tasks-card-single h5{
+  font-size: 1.05rem;
+}
+.change-view-type{
+  margin: 4px 0 4px 10px;
+}
+.change-view-type:hover svg rect{
+  fill: #007BFF;
+}
+
+.modal-window-refuse{
+    display: none;
+    position: fixed;
+    z-index: 1101;
+    background-color: white;
+    top: 12.5%;
+    left: 30%;
+    width: 40%;
+    height: auto;
+}
+.modal-window-refuse .card-header span, .modal-window-refuse .card-header span{
+    font-size: 11px;
+    color: rgba(104, 104, 104, 0.6);
+}
+.modal-window-refuse .card-header p, .modal-window-refuse .card-header p{
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.25;
+    margin-bottom: 0;
+}
+.modal-window-close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.modal-window-close:hover{
+  opacity: 0.85;
+}
